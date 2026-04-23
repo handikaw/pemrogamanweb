@@ -1,45 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>praktikum1</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio Handika</title>
+
+<style>
+
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: radial-gradient(circle at center, #f0f0f0 0%, #f6faff 50%, #e739a7 100%);
+}
+
+
+.header {
+    display: flex;
+    justify-content: center;
+    background: rgba(255, 101, 186, 0.9);
+    padding: 15px;
+    border-radius: 50px;
+    margin: 20px;
+}
+
+.navigasi ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    padding: 0;
+}
+
+.navigasi a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.navigasi a:hover {
+    color: white;
+}
+
+.container {
+    text-align: center;
+    padding: 30px;
+}
+
+
+.profile img {
+    width: 150px;
+    border-radius: 50%;
+    margin-top: 10px;
+}
+
+.profile h1 {
+    margin-bottom: 5px;
+}
+
+.profile p {
+    color: #333;
+}
+
+
+.card {
+    background: white;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+ul, ol {
+    text-align: left;
+    padding-left: 20px;
+}
+
+
+button {
+    padding: 10px 20px;
+    border: none;
+    background: #ff65ba;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: #e739a7;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th {
+    background: #ff65ba;
+    color: white;
+}
+
+td, th {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+</style>
 </head>
+
 <body>
-    <h1> Handika Wijaksono</h1>
-    <p>Informatika</p>
-    <div>
-        <p>gak bisa berkata kata yang penting bukti nyata</p>
-        <img src="https://chrome-dino.co/wp-content/uploads/2022/10/chrome-dino-logo.png" alt="dino"> 
 
-         <a href="https://www.google.com">Google</a> 
 
-    <h3>Hobi</h3>
-    <ul> 
-        <li>Main Game</li> 
-        <li>Ngoding</li>
-    </ul>
+<header class="header">
+    <nav class="navigasi">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Portofolio</a></li>
+            <li><a href="#">Nav HTML</a></li>
+            <li><a href="#">List HTML</a></li>
+            <li><a href="#">Form HTML</a></li>
+            <li><a href="CarRental/index.html">Car Rental</a></li>
+        </ul>
+    </nav>
+</header>
 
-    <h3>kesibukan</h3>
-    <ol> 
-        <li>Kuliah</li>
-        <li>kerja</li>
-    </ol>
 
-    <button>Klik</button> 
+<div class="container">
 
-    <table border="1">
-        <tr>
-            <th>visi</th>
-            <th>misi</th>
-        </tr>
-        <tr>
-            <td>Menjadi mahasiswa informatika yang unggul, kreatif, dan berkompeten di bidang teknologi</td>
-            <td>Belajar dengan tekun dan disiplin, mengembangkan kemampuan programming.</td>
-        </tr>
-    </table>
 
-</div>   
+    <div class="profile">
+        <h1>Handika Wijaksono</h1>
+        <p>Mahasiswa Informatika</p>
+        <img src="https://chrome-dino.co/wp-content/uploads/2022/10/chrome-dino-logo.png">
+    </div>
+
+  
+    <div class="card">
+        <p>Gak bisa berkata kata, yang penting bukti nyata </p>
+        <a href="https://www.google.com">Kunjungi Google</a>
+    </div>
+
+    <div class="card">
+        <h3>Hobi</h3>
+        <ul>
+            <li>Main Game</li>
+            <li>Ngoding</li>
+        </ul>
+    </div>
+
+ 
+    <div class="card">
+        <h3>Kesibukan</h3>
+        <ol>
+            <li>Kuliah</li>
+            <li>Kerja</li>
+        </ol>
+    </div>
+
+    
+    <div class="card">
+        <button>Klik Saya</button>
+    </div>
+
+    <div class="card">
+        <h3>Visi & Misi</h3>
+        <table>
+            <tr>
+                <th>Visi</th>
+                <th>Misi</th>
+            </tr>
+            <tr>
+                <td>Menjadi mahasiswa informatika yang unggul, kreatif, dan berkompeten di bidang teknologi</td>
+                <td>Belajar dengan tekun dan disiplin, mengembangkan kemampuan programming.</td>
+            </tr>
+        </table>
+    </div>
+
+</div>
 
 </body>
 </html>

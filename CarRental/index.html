@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Rental</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  
+    <nav>
+        <div class="logo">CarRental</div>
+        <div class="menu">
+            <a href="#home">Home</a>
+            <a href="#list">List</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+ 
+    <div id="home" class="section">
+        <div id="search">
+            <div class="title">
+                <h1>Car Rental</h1>
+                <p>Find the perfect car for your next adventure</p>
+                <hr>
+            </div>
+
+            <div class="form-container">
+                <div class="form-group">
+                    <label>Rental Location:</label>
+                    <select>
+                        <option>Select Location</option>
+                        <option>Yogyakarta</option>
+                        <option>Bali</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Start Date:</label>
+                    <input type="date">
+                </div>
+
+                <div class="form-group">
+                    <label>End Date:</label>
+                    <input type="date">
+                </div>
+
+                <button>Search</button>
+            </div>
+        </div>
+    </div>
+
+   
+    <div id="list" class="section">
+        <div class="car-list">
+            <h2>Car List</h2>
+
+            <div class="car-item">
+                <img src="https://imgcdn.oto.com/large/gallery/color/38/894/toyota-fortuner-color-729296.jpg">
+                <h3>Toyota Fortuner 2026</h3>
+                <p>Car Detail</p>
+            </div>
+
+            <div class="car-item">
+                <img src="https://imgcdn.oto.com/large/gallery/color/38/1240/toyota-kijang-innova-color-860711.jpg">
+                <h3>Toyota Innova 2026</h3>
+                <p>Car Detail</p>
+            </div>
+
+            <div class="car-item">
+                <img src="https://enimekspres.disway.id/upload/719991bf74fbc2f52e8451609bdeac66.jpg">
+                <h3>Toyota Calya 2026</h3>
+                <p>Manual • White • Rp170jt</p>
+            </div>
+
+            <div class="car-item">
+                <img src="https://imgcdn.oto.com/large/gallery/color/38/387/toyota-hilux-color-597891.jpg">
+                <h3>Toyota Hilux 2026</h3>
+                <p>Car Detail</p>
+            </div>
+        </div>
+    </div>
+
+  
+    <div id="about" class="section">
+        <h2>About </h2>
+        <p>Kami menyediakan layanan rental mobil terbaik untuk perjalanan Anda.</p>
+    </div>
+
+  
+    <div id="contact" class="section">
+        <h2>Contact</h2>
+        <form action="/submit" method="post">
+        <label>Name</label>
+        <input type="text" name="name" required>
+
+        <label>Email</label>
+        <input type="email" name="email" required>
+
+        <label>Message</label>
+        <textarea name="message" rows="4" required></textarea>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    </div>
+
+</body>
+</html>
