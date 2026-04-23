@@ -3,52 +3,180 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <header>
-        <h1> welcome to my portfolio</h1>
-        <nav>
-            <a href="#">Home</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
-        </nav><br><br>
+    <title>Portfolio Handika</title>
 
-        <img src="dika.jpeg" alt="dika"  width="100">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #ffffff;
+        }
+
+        header {
+            background-color: #d44699;
+            color: rgb(255, 255, 255);
+            text-align: center;
+            padding: 20px;
+        }
+
+        nav a {
+            background-color: #d4489e;
+            color: rgb(255, 255, 255);
+            margin: 0 10px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        p  {
+            color: #c73a9a;
+          
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .profile {
+            text-align: center;
+        }
+
+        .profile img {
+            border-radius: 50%;
+            margin-top: 10px;
+        }
+
+        h2 {
+            color: #db5eb7;
+        }
+        h3 {
+            color: #e138bc;
+
+        }
+
+        ul {
+            list-style: square;
+        }
+       li {
+        color: #cd4ba4f2;
+
+        }
+
+        .projects img {
+            margin: 10px;
+            border-radius: 10px;
+        }
+
+        form {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            width: 300px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #dd4498;
+        }
+
+        label {
+            color: #cd4ba4f2
+        }
+        
+
+        input[type="submit"] {
+            background-color: #db34ae;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #ce3398;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #d4489e;
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Welcome to My Portfolio</h1>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<div class="container">
+
+    <div class="profile">
+        <img src="dika.jpeg" alt="dika" width="120">
         <h2>Handika Wijaksono</h2>
         <p>Hi, I'm Handika Wijaksono, a student at Mercu Buana University majoring in Informatics.</p>
+    </div>
 
     <h2 id="about">About</h2>
+
     <h2>Skills</h2>
-    <p> my skills</p>
+    <p>my skills</p>
     <ul>
-        <li>bahasa C</li>
-        <li>excel</li>
-        <li>xampp</li>
+        <li>Bahasa C</li>
+        <li>Microsoft Excel</li>
+        <li>XAMPP</li>
     </ul>
+
     <h2>Projects</h2>
-    <p>Details my projects</p>
+    <p>Details of my projects:</p>
+
     <ul>
-        <li>membuat database</li>
-        <li>input data excel</li>
-        <li>pemrogaman bahasa c</li>
+        <li>Membuat Database</li>
+        <li>Input Data Excel</li>
+        <li>Pemrograman Bahasa C</li>
     </ul>
-    <img src="https://3.bp.blogspot.com/-BnTDRrOm0mc/WRsFmomNt5I/AAAAAAAACA8/LAlwVTYSt1M4muvRbHAPj_OCUWKAIhoWgCLcB/s1600/10.jpg" alt="database" width="200">
-    <img src="https://storage.googleapis.com/fastwork-static/9b308b80-8af6-4d07-a66a-bea260c968ef.jpg" alt="excel" width="200">
-    <img src="https://3.bp.blogspot.com/-1hDp3Q6gU8c/VRT1iYwn4cI/AAAAAAAAADk/GdyACQjF-Rc/s1600/markijar.com%2B-%2BMemangkatkan%2BSebuah%2BBilangan%2B-%2B%2B%2Bujian%2Bnasional%2Bbahan%2Bajar%2Bmateri%2Bujian%2Bnasional%2Bpelajaran%2Bipa%2Bmata%2Bpelajaran%2Bkisi%2Bkisi%2Bcontoh%2Bsoal%2Bcpns.PNG" alt=" bahsa c" width="200">
 
-    <h3 id="contact"> Contact</h3>
-    <form  action="/submit" method ="post">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" required><br><br>
+    <div class="projects">
+        <img src="https://3.bp.blogspot.com/-BnTDRrOm0mc/WRsFmomNt5I/AAAAAAAACA8/LAlwVTYSt1M4muvRbHAPj_OCUWKAIhoWgCLcB/s1600/10.jpg" width="200">
+        <img src="https://storage.googleapis.com/fastwork-static/9b308b80-8af6-4d07-a66a-bea260c968ef.jpg" width="200">
+        <img src="https://3.bp.blogspot.com/-1hDp3Q6gU8c/VRT1iYwn4cI/AAAAAAAAADk/GdyACQjF-Rc/s1600/markijar.com%2B-%2BMemangkatkan%2BSebuah%2BBilangan%2B-%2B%2B%2Bujian%2Bnasional%2Bbahan%2Bajar%2Bmateri%2Bujian%2Bnasional%2Bpelajaran%2Bipa%2Bmata%2Bpelajaran%2Bkisi%2Bkisi%2Bcontoh%2Bsoal%2Bcpns.PNG" width="200">
+    </div>
 
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required><br><br>
+    <h3 id="contact">Contact</h3>
 
-        <label for="message">message</label><br>
-        <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+    <form action="/submit" method="post">
+        <label>Name</label>
+        <input type="text" name="name" required>
+
+        <label>Email</label>
+        <input type="email" name="email" required>
+
+        <label>Message</label>
+        <textarea name="message" rows="4" required></textarea>
 
         <input type="submit" value="Submit">
     </form>
+
+</div>
+
+<footer>
+    <p1>© 2026 Handika Wijaksono</p1>
+</footer>
+
 </body>
 </html>
