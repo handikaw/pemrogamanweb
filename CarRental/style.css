@@ -1,4 +1,5 @@
-nav {
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -20,6 +21,10 @@ nav {
     z-index: 1000;
 }
 
+.logo {
+    color: #e64a19;
+}
+
 nav a {
     color: white;
     text-decoration: none;
@@ -32,7 +37,6 @@ nav a {
 nav a:hover {
     color: #ff5722;
 }
-
 
 nav a::after {
     content: "";
@@ -52,8 +56,8 @@ nav a:hover::after {
 
 #search {
     width: 100%;
-    height: 50em;
-    background-image: url("https://abigailrental.com/wp-content/uploads/2024/11/Rental-Mobil-Jogja-Murah.jpg");
+    height: 60em;
+    background-image: url("https://abertarental.com/wp-content/uploads/2024/12/Pilihan-Unit-Rental-Mobil-di-Jogja.jpg") ;
     background-size: cover;
     background-position: center;
     display: flex;
@@ -61,43 +65,16 @@ nav a:hover::after {
     align-items: center;
     flex-direction: column;
 }
-.logo{
-    color: #e64a19;
 
-}
-
-title {
-    color: white;
-    text-align: center;
-}
-
-title h1 {
-    font-size: 3em;
-  
-}
-h1{
+h1 {
     color: white;
 }
 
-title p {
-    font-size: 1.5em;
-    margin: 0.5em 0;
-  
-}
-p{
+p {
     color: white;
 }
 
-title hr {
-    width: 50em;
-    max-width: 90vw;
-    border: 1px solid white;
-    margin: 2em auto;
-    opacity: 0.5;
-}
-
-
- .form-container {
+.form-container {
     background-color: rgba(0, 0, 0, 0.5);
     display: flex;
     justify-content: center;
@@ -152,7 +129,6 @@ title hr {
     margin-bottom: 1em;
 }
 
-
 .car-item {
     background: white;
     border-radius: 1em;
@@ -184,41 +160,165 @@ title hr {
     font-size: 0.9em;
 }
 
-#contact {
+
+#about {
     padding: 3em 1em;
+    background: #f5f5f5;
+}
+
+.about-container {
+    display: flex;
+    gap: 2em;
+    max-width: 1100px;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+/* KIRI */
+.about-left {
+    flex: 1;
+    background: white;
+    padding: 1.5em;
+    border-radius: 1em;
     text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
-.contact-form {
-    max-width: 400px;
-    margin: 20px auto;
-    text-align: left;
+.about-left img {
+    width: 150px;
+    border-radius: 10px;
+    margin-bottom: 10px;
 }
 
-.contact-form .form-group {
-    margin-bottom: 15px;
+.about-left h2 {
+    margin: 10px 0;
 }
 
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    padding: 8px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+.about-left p {
+    color: #555;
 }
 
-.contact-form button {
-    width: 100%;
-    padding: 10px;
-    background: #ff5722;
+.about-left button {
+    margin-top: 15px;
+    padding: 10px 20px;
     border: none;
+    border-radius: 20px;
+    background: linear-gradient(to right, #ff5722, #e64a19);
     color: white;
     cursor: pointer;
 }
 
-.contact-form button:hover {
-    background: #e64a19;
+
+.about-right {
+    flex: 2;
+    background: white;
+    padding: 2em;
+    border-radius: 1em;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
+
+.about-right h2 {
+    border-bottom: 3px solid #ff5722;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.about-right p {
+    color: #555;
+    line-height: 1.6;
+}
+
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1em;
+    margin-top: 15px;
+}
+
+.service-box {
+    background: #f0f0f0;
+    padding: 15px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.service-box:hover {
+    background: #ffe0d6;
+    transform: translateY(-5px);
+}
+
+#contact {
+    background: #8faec1;
+    padding: 2em 1em;
+}
+
+.contact-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.contact-card {
+    display: flex;
+    width: 700px;
+    background: white;
+    border-radius: 1em;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    flex-wrap: wrap;
+}
+
+.contact-left {
+    flex: 1;
+    padding: 2em;
+}
+
+.contact-left h2 {
+    margin-bottom: 15px;
+}
+
+.contact-left input,
+.contact-left textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 20px;
+    border: none;
+    background: #e9f0f5;
+}
+
+.contact-left textarea {
+    border-radius: 10px;
+    height: 80px;
+}
+
+.contact-left button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    background: linear-gradient(to right, #00b4db, #0083b0);
+    color: white;
+    cursor: pointer;
+}
+
+.contact-left button:hover {
+    opacity: 0.8;
+}
+
+
+.contact-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f5f9fc;
+}
+
+.contact-right img {
+    width: 120px;
+}
+
 
 footer {
     background: #e8d8d8;
