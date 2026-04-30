@@ -322,12 +322,16 @@ p {
 }
 
 
+footer{
+    background-color: white;
+
+    }
 
 
 
 .footer-modern {
-    background: #0d1b2a;
-    color: white;
+   
+    color: rgb(13, 13, 13);
     margin-top: 50px;
 }
 
