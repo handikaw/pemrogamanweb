@@ -1,0 +1,406 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(62, 62, 72, 0.8);
+    padding: 1em 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    color: white;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 1.1em;
+    position: relative;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #0f0705;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: #070301;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+
+#search {
+    width: 100%;
+    height: 40em;
+    background-image: url("https://iknpos.id/wp-content/uploads/2025/07/ikan-hias-aquarium-750x469.jpg") ;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    color: white;
+}
+
+p {
+    color: white;
+}
+
+.form-container {
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+    border-radius: 1em;
+    color: white;
+    gap: 1.5em;
+    flex-wrap: wrap;
+}
+
+.form-container select,
+.form-container input {
+    padding: 0.5em;
+    border: none;
+    border-radius: 0.5em;
+    width: 15em;
+    height: 2.5em;
+}
+
+.form-container button {
+    padding: 0.6em 1.2em;
+    border: none;
+    border-radius: 0.5em;
+    background-color: #4722ff;
+    color: white;
+    cursor: pointer;
+}
+
+.form-container button:hover {
+    background-color: #192ee6;
+}
+
+
+#list {
+    background: white;
+    padding: 3em 1em;
+}
+
+.ikan-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    gap: 1.5em;
+    max-width: 80rem;
+    margin: 0 auto;
+}
+
+.ikan-list h2 {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+
+.ikan-item {
+    background: white;
+    border-radius: 1em;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+    text-align: center;
+    padding-bottom: 1em;
+}
+
+.ikan-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.ikan-item img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.ikan-item h3 {
+    margin: 1em 0 0.5em;
+}
+
+.ikan-item p {
+    padding: 0 1em;
+    color: #555;
+    font-size: 0.9em;
+}
+
+
+#about {
+    padding: 3em 1em;
+    background: white;
+}
+
+.about-container {
+    display: flex;
+    gap: 2em;
+    max-width: 1100px;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+.about-left {
+    flex: 1;
+    background: white;
+    padding: 1.5em;
+    border-radius: 1em;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.about-left img {
+    width: 150px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.about-left h2 {
+    margin: 10px 0;
+}
+
+.about-left p {
+    color: #555;
+}
+
+.about-left button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background: linear-gradient(to right, #0e25b7, #2a0bb5);
+    color: white;
+    cursor: pointer;
+}
+
+
+.about-right {
+    flex: 2;
+    background: white;
+    padding: 2em;
+    border-radius: 1em;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.about-right h2 {
+    border-bottom: 3px solid #0026ff;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.about-right p {
+    color: #555;
+    line-height: 1.6;
+}
+
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1em;
+    margin-top: 15px;
+}
+
+.service-box {
+    background: #f0f0f0;
+    padding: 15px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.service-box:hover {
+    background: #ffe0d6;
+    transform: translateY(-5px);
+}
+
+#contact {
+    background: #8faec1;
+    padding: 2em 1em;
+}
+
+.contact-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.contact-card {
+    display: flex;
+    width: 700px;
+    background: white;
+    border-radius: 1em;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    flex-wrap: wrap;
+}
+
+.contact-left {
+    flex: 1;
+    padding: 2em;
+}
+
+.contact-left h2 {
+    margin-bottom: 15px;
+}
+
+.contact-left input,
+.contact-left textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 20px;
+    border: none;
+    background: #e9f0f5;
+}
+
+.contact-left textarea {
+    border-radius: 10px;
+    height: 80px;
+}
+
+.contact-left button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    background: linear-gradient(to right, #00b4db, #0083b0);
+    color: white;
+    cursor: pointer;
+}
+
+.contact-left button:hover {
+    opacity: 0.8;
+}
+
+
+.contact-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f5f9fc;
+}
+
+.contact-right img {
+    width: 120px;
+}
+
+
+
+
+.footer-modern {
+    background: #0d1b2a;
+    color: white;
+    margin-top: 50px;
+}
+
+.footer-top {
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    padding: 15px;
+    text-align: center;
+}
+
+.footer-top p {
+    margin-bottom: 10px;
+    font-size: 0.9em;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 0.9em;
+    border: 1px solid white;
+    padding: 5px 10px;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    background: white;
+    color: #00bcd4;
+}
+
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 2em;
+    max-width: 1100px;
+    margin: auto;
+    gap: 20px;
+}
+
+.footer-box {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-box h3 {
+    margin-bottom: 10px;
+    border-bottom: 2px solid #00bcd4;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.footer-box p {
+    font-size: 0.9em;
+    color: #ccc;
+}
+
+.footer-box a {
+    display: block;
+    color: #ccc;
+    text-decoration: none;
+    margin: 5px 0;
+    font-size: 0.9em;
+}
+
+.footer-box a:hover {
+    color: #00bcd4;
+}
+
+
+.footer-bottom {
+    text-align: center;
+    padding: 1em;
+    background: #020c1b;
+    font-size: 0.8em;
+}
