@@ -5,6 +5,9 @@
     box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
+html{
+    scroll-behavior: smooth;
+}
 
 body {
     margin: 0;
@@ -22,7 +25,7 @@ nav {
 }
 
 .logo {
-    color: #e64a19;
+    color: #090086;
 }
 
 nav a {
@@ -35,7 +38,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #ff5722;
+    color: #0f0705;
 }
 
 nav a::after {
@@ -43,7 +46,7 @@ nav a::after {
     position: absolute;
     width: 0%;
     height: 2px;
-    background: #ff5722;
+    background: #070301;
     left: 0;
     bottom: -5px;
     transition: 0.3s;
@@ -99,13 +102,13 @@ p {
     padding: 0.6em 1.2em;
     border: none;
     border-radius: 0.5em;
-    background-color: #ff5722;
+    background-color: #4722ff;
     color: white;
     cursor: pointer;
 }
 
 .form-container button:hover {
-    background-color: #e64a19;
+    background-color: #192ee6;
 }
 
 
@@ -174,7 +177,6 @@ p {
     flex-wrap: wrap;
 }
 
-/* KIRI */
 .about-left {
     flex: 1;
     background: white;
@@ -203,7 +205,7 @@ p {
     padding: 10px 20px;
     border: none;
     border-radius: 20px;
-    background: linear-gradient(to right, #ff5722, #e64a19);
+    background: linear-gradient(to right, #0e25b7, #2a0bb5);
     color: white;
     cursor: pointer;
 }
@@ -218,7 +220,7 @@ p {
 }
 
 .about-right h2 {
-    border-bottom: 3px solid #ff5722;
+    border-bottom: 3px solid #0026ff;
     display: inline-block;
     margin-bottom: 10px;
 }
