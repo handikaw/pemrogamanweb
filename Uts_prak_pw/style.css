@@ -1,0 +1,526 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+html{
+    scroll-behavior:smooth;
+}
+
+body {
+    margin: 0;
+}
+
+nav {
+
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 1em 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    background: white#333;
+    min-width: 150px;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px;
+    color: black;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    background: #f2f2f2;
+}
+
+
+.nav-cart {
+
+    margin-left: auto; 
+    background: orangered;
+    color:white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    
+}
+
+#cart-box {
+    display: none;
+    position: absolute;
+    top: 45px;
+    right: 0;
+    width: 250px;
+    background: white;
+    color: black;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+
+.nav-cart:hover #cart-box {
+    display: block;
+}
+.menu {
+
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+.logo{
+    width: 60px;
+    height: 60px;
+    background-image: url('kup\ \(1\).png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+nav a {
+    color: black;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 1.1em;
+    position: relative;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: orangered;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: #070301;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+
+#search {
+    width: 100%;
+    height: 40em;
+    background-image: url("kupras.png") ;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    color: white;
+}
+
+p {
+    color: white;
+}
+
+
+
+
+#produk{
+    background: linear-gradient(to bottom, #f8f8f8, #ffffff);
+    padding: 00em 1em;
+}
+
+
+.produk-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    gap: 2.5em;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+.produk-list h2 {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: 800;
+    color: #111;
+    letter-spacing: 1px;
+    margin-bottom: 1.5em;
+    position: relative;
+}
+
+.produk-list h2::after {
+    content: "";
+    width: 90px;
+    height: 4px;
+    background: #1a1919;
+    display: block;
+    margin: 12px auto 0;
+    border-radius: 10px;
+}
+
+.produk-item {
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    text-align: center;
+    transition: all 0.35s ease;
+    position: relative;
+}
+
+.produk-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 18px 35px rgba(0,0,0,0.15);
+}
+
+.produk-item img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    transition: 0.4s ease;
+}
+
+.produk-item:hover img {
+    transform: scale(1.08);
+}
+
+
+.produk-item h3 {
+    margin: 1em 0 0.3em;
+    font-size: 1.25em;
+    color: #222;
+    font-weight: 700;
+}
+
+
+.produk-item p {
+    padding: 0 1.2em;
+    color: #3b2424;
+    font-size: 0.9em;
+    line-height: 1.4;
+}
+
+
+.produk-item .price {
+    margin: 0.7em 0;
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #0d0c0c;
+}
+
+
+.produk-item button {
+    margin-bottom: 1.2em;
+    padding: 10px 22px;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #3a2121, #ff7a7a);
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+
+.produk-item button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 18px rgba(255, 77, 77, 0.3);
+}
+
+
+.produk-item::before {
+    content: "THRIFT";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: rgba(64, 43, 43, 0.9);
+    color: white;
+    font-size: 0.7em;
+    padding: 5px 10px;
+    border-radius: 20px;
+    letter-spacing: 1px;
+}
+#about {
+    padding: 3em 1em;
+    background: white;
+}
+
+.about-container {
+    display: flex;
+    gap: 2em;
+    max-width: 1100px;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+.about-left {
+    flex: 1;
+    background: white;
+    padding: 1.5em;
+    border-radius: 1em;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.about-left img {
+    width: 150px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.about-left h2 {
+    margin: 10px 0;
+}
+
+.about-left p {
+    color: #555;
+}
+
+.about-left button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background: linear-gradient(to right, orangered);
+    color: white;
+    cursor: pointer;
+}
+
+
+.about-right {
+    flex: 2;
+    background: white;
+    padding: 2em;
+    border-radius: 1em;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.about-right h2 {
+    border-bottom: 3px solid orangered;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.about-right p {
+    color: #555;
+    line-height: 1.6;
+}
+
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1em;
+    margin-top: 15px;
+}
+
+.service-box {
+    background: #f0f0f0;
+    padding: 15px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.service-box:hover {
+    background: #ffe0d6;
+    transform: translateY(-5px);
+}
+
+#contact {
+    background: #8faec1;
+    padding: 2em 1em;
+}
+
+.contact-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.contact-card {
+    display: flex;
+    width: 700px;
+    background: white;
+    border-radius: 1em;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    flex-wrap: wrap;
+}
+
+.contact-left {
+    flex: 1;
+    padding: 2em;
+}
+
+.contact-left h2 {
+    margin-bottom: 15px;
+}
+
+.contact-left input,
+.contact-left textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 20px;
+    border: none;
+    background: #e9f0f5;
+}
+
+.contact-left textarea {
+    border-radius: 10px;
+    height: 80px;
+}
+
+.contact-left button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    background: linear-gradient(to right, #00b4db, #0083b0);
+    color: white;
+    cursor: pointer;
+}
+
+.contact-left button:hover {
+    opacity: 0.8;
+}
+
+
+.contact-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f5f9fc;
+}
+
+.contact-right img {
+    width: 120px;
+}
+
+
+footer{
+    background-color:orangered;
+
+    }
+
+
+
+.footer-modern {
+   
+    color: rgb(13, 13, 13);
+    margin-top: 50px;
+}
+
+.footer-top {
+    background: linear-gradient(to right, #3a3c3e, #3a3e3e);
+    padding: 15px;
+    text-align: center;
+}
+
+.footer-top p {
+    margin-bottom: 10px;
+    font-size: 0.9em;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 0.9em;
+    border: 1px solid white;
+    padding: 5px 10px;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    background: white;
+    color: #566f72;
+}
+
+
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 2em;
+    max-width: 1100px;
+    margin: auto;
+    gap: 20px;
+}
+
+.footer-box {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-box h3 {
+    margin-bottom: 10px;
+    border-bottom: 2px solid #00bcd4;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.footer-box p {
+    font-size: 0.9em;
+    color: white;
+}
+
+.footer-box a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin: 5px 0;
+    font-size: 0.9em;
+}
+
+.footer-box a:hover {
+    color: #2d3030;
+}
+
+
+.footer-bottom {
+    text-align: center;
+    padding: 1em;
+    background: #383b40;
+    font-size: 0.8em;
+}
+
+
+
+#total {
+    text-align: left;
+    margin: 10px 20px 10px;
+}
+
+
