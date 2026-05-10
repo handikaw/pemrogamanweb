@@ -26,48 +26,47 @@
             <a href="#about">About</a>
             <a href="#contact">Contact</a>
         </div>
-    <div class="nav-cart">
 
-    🛒 <span id="cart-count">0</span> |
-    Total: <span id="total">Rp 0</span>
+       
+        <div class="nav-cart">
 
-    <div id="cart-box">
-        <h3>Keranjang Belanja</h3>
-        <ul id="cart-list"></ul>
-        <div class="checkout-box">
-            <h4>Total :<span id="cart-total">Rp 0</span></h4>
-            <button id="checkout-btn">Checkout </button>
-            
+            🛒 <span id="cart-count">0</span> |
+            Total: <span id="total">Rp 0</span>
+
+            <div id="cart-box">
+                <h3>Keranjang Belanja</h3>
+                <ul id="cart-list"></ul>
+                <div class="checkout-box">
+                    <h4>Total :<span id="cart-total">Rp 0</span></h4>
+                    <button id="checkout-btn">Checkout </button>  
+              </div>
         </div>
+     </div>
 
-    </div>
-
-</div>
-
-<div id="checkout-page">
+        <div id="checkout-page">
     
-    <div class="checkout-content">
-        <h2>Checkout</h2>
-        <div id="checkout-items"></div>
-        <h3>Total :<span id="checkout-total"> Rp 0</span></h3>
-        <label>Metode Pembayaran</label>
-        <select id="payment-method">
-            <option value=""> Pilih Pembayaran </option>
-            <option value="Transfer Bank">transfer Bank </option>
-            <option value="COD">COD</option>
-            <option value="Dana"> Dana</option>
-            <option value="OVO">OVO</option>
-            <option value="Gopay">Gopay</option>
-        </select>
-        <button id="bayar-btn"> Bayar Sekarang</button>
-        <button id="close-checkout">Tutup</button>
-    </div>
-<div id="history-box">
-    <h2>Histori Pembelian</h2>
-    <ul id="history-list"></ul>
-</div>
-</div>
- </nav>
+            <div class="checkout-content">
+                <h2>Checkout</h2>
+                <div id="checkout-items"></div>
+                <h3>Total :<span id="checkout-total"> Rp 0</span></h3>
+                <label>Metode Pembayaran</label>
+                <select id="payment-method">
+                    <option value=""> Pilih Pembayaran </option>
+                    <option value="Transfer Bank">transfer Bank </option>
+                    <option value="COD">COD</option>
+                    <option value="Dana"> Dana</option>
+                    <option value="OVO">OVO</option>
+                    <option value="Gopay">Gopay</option>
+                </select>
+                <button id="bayar-btn"> Bayar Sekarang</button>
+                <button id="close-checkout">Tutup</button>
+             </div>
+                <div id="history-box">
+                    <h2>Histori Pembelian</h2>
+                    <ul id="history-list"></ul>
+                </div>
+        </div>
+    </nav>
 
    
     <div id="home" class="section">
@@ -75,48 +74,54 @@
             <div class="title">
                 <h1>Selamat Datang di RD Toko Baju</h1>
                 <p>Gaya Hidup Pria Modern Dimulai di Sini</p>
-                <hr>
-        </div>
-    </div>
-
-    
-    <div class="lihat-produk">
-        <h2 id="produk">produk</h2>
-        <img src="produk.png" alt="produk">
-    </div>
-   
-        <div class="produk-list">
-             <h2 id="kaos">Kaos</h2>
-           <div class="produk-item"  id="kaos" data-price="50000">
-                <img src="Kaos.png" alt="kaos polos">
-                <h3>kaos </h3>
-                <label > Size</label>
-                 <select class="size">
-                    <option value="">Pilih Size</option>
-                    <option>S</option>
-                    <option>M</option>
-                    <option>L</option>
-                    <option>XL</option>
-                </select>
-
-            <label>Warna:</label>
-            <select class="warna">
-                <option value="">Pilih Warna</option>
-                <option>Hitam</option>
-                <option>Coklat</option>
-                <option>Merah</option>
-                <option>Putih</option>
-                <option>Abu</option>
-                <option>Cream</option>
-
-
-
-            </select>
-                <p class="price">Rp 50.000</p>
-                <button class="beli-btn">Beli</button>
+                <a href="https://dikaw.infinityfreeapp.com/wp" class="btn-profil">Profil Kami</a>
             </div>
+        </div>
+    
+        <div class="lihat-produk">
+                <h2 id="produk">produk</h2>
+               <div class="grid-container">
 
-            <div class="produk-item" data-price="100000">
+                    <div class="produk-item-gallery">
+                        <img src="jawa.jpg" alt="Produk 1">
+                    </div>
+
+                    <div class="produk-item-gallery">
+                        <img src="dragroul.jpg" alt="Produk 2">
+                    </div>
+
+                </div>
+            </div>
+    
+            <div class="produk-list">
+                <h2 id="kaos">Kaos</h2>
+               <div class="produk-item"  id="kaos" data-price="50000">
+                    <img src="Kaos.png" alt="kaos polos">
+                    <h3>kaos </h3>
+                    <label > Size</label>
+                    <select class="size">
+                        <option value="">Pilih Size</option>
+                        <option>S</option>
+                        <option>M</option>
+                        <option>L</option>
+                        <option>XL</option>
+                    </select>
+
+                 <label>Warna:</label>
+                    <select class="warna">
+                    <option value="">Pilih Warna</option>
+                    <option>Hitam</option>
+                    <option>Coklat</option>
+                    <option>Merah</option>
+                    <option>Putih</option>
+                    <option>Abu</option>
+                    <option>Cream</option>
+                </select>
+                <p class="price">Rp 50.000</p>
+                        <button class="beli-btn">Beli</button>
+                </div>
+
+                <div class="produk-item" data-price="100000">
                 <img src="Polo.png" alt="polo">
                 <h3>polo</h3>
                 <label > Size</label>
@@ -128,8 +133,8 @@
                     <option>XL</option>
                 </select>
 
-            <label>Warna:</label>
-            <select class="warna">
+             <label>Warna:</label>
+             <select class="warna">
                 <option value="">Pilih Warna</option>
                 <option>Hitam</option>
                 <option>Coklat</option>
@@ -138,7 +143,7 @@
                 <option>Abu</option>
                 <option>Cream</option>
                 
-            </select>
+             </select>
                 <p class="price">Rp 100.000</p>
                 <button class="beli-btn">Beli</button>
             </div>
@@ -147,7 +152,7 @@
                 <img src="kemeja.png" alt="kemeja">
                 <h3>kemeja</h3>
                <label > Size</label>
-                 <select class="size">
+                <select class="size">
                     <option value="">Pilih Size</option>
                     <option>S</option>
                     <option>M</option>
@@ -155,8 +160,8 @@
                     <option>XL</option>
                 </select>
 
-            <label>Warna:</label>
-            <select class="warna">
+             <label>Warna:</label>
+              <select class="warna">
                 <option value="">Pilih Warna</option>
                 <option>Hitam</option>
                 <option>Coklat</option>
@@ -164,12 +169,12 @@
                 <option>Putih</option>
                 <option>Abu</option>
                 <option>Cream</option>
-            </select>
+              </select>
                 <p class="price">Rp 150.000</p>
                 <button class="beli-btn">Beli</button>
             </div>
              <h2 id="celana">Celana</h2>
-           <div class="produk-item" id="Cealana" data-price="250000">
+            <div class="produk-item" id="Cealana" data-price="250000">
                 <img src="work.png" alt="work">
                 <h3>celana work pants </h3>
                  <label > Size</label>
@@ -181,8 +186,8 @@
                     <option>34</option>
                 </select>
 
-            <label>Warna:</label>
-            <select class="warna">
+             <label>Warna:</label>
+             <select class="warna">
                 <option value="">Pilih Warna</option>
                 <option>Hitam</option>
                 <option>Coklat</option>
@@ -190,11 +195,12 @@
                 <option>Biru dark</option>
                 <option>Abu</option>
                 <option>Cream</option>
-            </select>
+             </select>
                 <p class="price">Rp 250.000</p>
                 <button class="beli-btn">Beli</button>
 
-            </div><div class="produk-item" data-price="17000">
+            </div>
+            <div class="produk-item" data-price="17000">
                 <img src="denim.png" alt="denim">
                 <h3>celana jeans denim</h3>
                 <label > Size</label>
@@ -206,8 +212,8 @@
                     <option>34</option>
                 </select>
 
-            <label>Warna:</label>
-            <select class="warna">
+             <label>Warna:</label>
+             <select class="warna">
                 <option value="">Pilih Warna</option>
                 <option>Hitam</option>
                 <option>Biru retro</option>
@@ -257,6 +263,9 @@
                 <option value="">Pilih Warna</option>
                 <option>Hitam</option>
                 <option>Coklat</option>
+                <option>Abu</option>
+                <option>cream</option>
+                <option>navy</option>
             </select>
                 <p class="price">Rp 199.000</p>
                 <button class="beli-btn">Beli</button>
@@ -279,6 +288,9 @@
                 <option value="">Pilih Warna</option>
                 <option>Hitam</option>
                 <option>Coklat</option>
+                <option>Abu</option>
+                <option>cream</option>
+                <option>navy</option>
             </select>
                 <p class="price">Rp 150.000</p>
                 <button class="beli-btn">Beli</button>
@@ -300,12 +312,12 @@
                 <option value="">Pilih Warna</option>
                 <option>Hitam</option>
                 <option>Coklat</option>
+                <option>cream</option>                
             </select>
                 <p class="price">Rp 175.000</p>
                 <button class="beli-btn">Beli</button>
                 
             </div>
-
         </div>
     </div>
 
@@ -321,11 +333,11 @@
                 <p><b>Phone:</b> 0858-4813-2525</p>
                 <p><b>Email:</b> handikawijaksono@gmail.com</p>
                 <p><b>Location:</b> Babarsari</p>
-        </div>
-        <button onclick="window.location.href='https://wa.me/6285848132525'"> Admin </button>
-        </div>
+            </div>
+         <button onclick="window.location.href='https://wa.me/6285848132525'"> Admin </button>
+         </div>
 
-        <div class="about-right">
+            <div class="about-right">
 
             <h2>ABOUT</h2>
 
