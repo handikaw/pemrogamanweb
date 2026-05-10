@@ -26,15 +26,48 @@
             <a href="#about">About</a>
             <a href="#contact">Contact</a>
         </div>
-         <div class="nav-cart">
-        🛒 <span id="cart-count">0</span> |
-        Total: <span id="total">Rp 0</span>
-         <div id="cart-box">
+    <div class="nav-cart">
+
+    🛒 <span id="cart-count">0</span> |
+    Total: <span id="total">Rp 0</span>
+
+    <div id="cart-box">
         <h3>Keranjang Belanja</h3>
         <ul id="cart-list"></ul>
-            </div>
-     </div>
-    </nav>
+        <div class="checkout-box">
+            <h4>Total :<span id="cart-total">Rp 0</span></h4>
+            <button id="checkout-btn">Checkout </button>
+            
+        </div>
+
+    </div>
+
+</div>
+
+<div id="checkout-page">
+    
+    <div class="checkout-content">
+        <h2>Checkout</h2>
+        <div id="checkout-items"></div>
+        <h3>Total :<span id="checkout-total"> Rp 0</span></h3>
+        <label>Metode Pembayaran</label>
+        <select id="payment-method">
+            <option value=""> Pilih Pembayaran </option>
+            <option value="Transfer Bank">transfer Bank </option>
+            <option value="COD">COD</option>
+            <option value="Dana"> Dana</option>
+            <option value="OVO">OVO</option>
+            <option value="Gopay">Gopay</option>
+        </select>
+        <button id="bayar-btn"> Bayar Sekarang</button>
+        <button id="close-checkout">Tutup</button>
+    </div>
+<div id="history-box">
+    <h2>Histori Pembelian</h2>
+    <ul id="history-list"></ul>
+</div>
+</div>
+ </nav>
 
    
     <div id="home" class="section">
@@ -47,12 +80,15 @@
     </div>
 
     
+    <div class="lihat-produk">
+        <h2 id="produk">produk</h2>
+        <img src="produk.png" alt="produk">
+    </div>
    
         <div class="produk-list">
-            <!-- <h2 id="produk">produk</h2> -->
              <h2 id="kaos">Kaos</h2>
            <div class="produk-item"  id="kaos" data-price="50000">
-                <img src="https://s.alicdn.com/@sc04/kf/H54099c26f8124942a2df12e971274dba2.jpg_720x720q50.jpg" alt="kaos polos">
+                <img src="Kaos.png" alt="kaos polos">
                 <h3>kaos </h3>
                 <label > Size</label>
                  <select class="size">
@@ -81,7 +117,7 @@
             </div>
 
             <div class="produk-item" data-price="100000">
-                <img src="12.jpg" alt="polo">
+                <img src="Polo.png" alt="polo">
                 <h3>polo</h3>
                 <label > Size</label>
                  <select class="size">
@@ -108,7 +144,7 @@
             </div>
 
             <div class="produk-item" data-price="150000">
-                <img src="3.jpg" alt="kemeja">
+                <img src="kemeja.png" alt="kemeja">
                 <h3>kemeja</h3>
                <label > Size</label>
                  <select class="size">
@@ -134,7 +170,7 @@
             </div>
              <h2 id="celana">Celana</h2>
            <div class="produk-item" id="Cealana" data-price="250000">
-                <img src="15.jpg" alt="work">
+                <img src="work.png" alt="work">
                 <h3>celana work pants </h3>
                  <label > Size</label>
                  <select class="size">
@@ -159,7 +195,7 @@
                 <button class="beli-btn">Beli</button>
 
             </div><div class="produk-item" data-price="17000">
-                <img src="20.jpg" alt="denim">
+                <img src="denim.png" alt="denim">
                 <h3>celana jeans denim</h3>
                 <label > Size</label>
                 <select class="size">
@@ -181,7 +217,7 @@
                 <button class="beli-btn">Beli</button>
             </div>
             <div class="produk-item" data-price="150000">
-                <img src="25.jpg" alt="chinos">
+                <img src="chinos.png" alt="chinos">
                 <h3>celana chinos uniqlo</h3>
                 <label > Size</label>
                 <select class="size">
@@ -201,11 +237,11 @@
                 <option>Cream</option>
             </select>
                 <p class="price">Rp 150.000</p>
-                <button>Beli</button>
+                <button class="beli-btn">Beli</button>
             </div>
              <h2 id="jaket">jaket</h2>
             <div class="produk-item" id="Jaket" data-price="199.000">
-                <img src="https://cleanhomeexpert.co.uk/wp-content/images/should-you-wash-hoodies-zipped-or-unzipped-22t45zdm.jpg" alt="h&m">
+                <img src="hodie.png" alt="h&m">
                 <h3>hodie h&m</h3>
                  <label > Size</label>
                 <select class="size">
@@ -227,7 +263,7 @@
             </div>
 
             <div class="produk-item" data-price="150.000">
-                <img src="50.jpg" alt="harington">
+                <img src="harington.png" alt="harington">
                 <h3>tancel harington </h3>
                 <label > Size</label>
                  <select class="size">
@@ -277,9 +313,8 @@
     <div id="about" class="section about-container">
 
         <div class="about-left">
-            <img src="70.jpg">
-
-            <h2>Toko Fshion RD</h2>
+            <img src="kamu.png">
+            <h2>Toko Fashion RD</h2>
             <p>Fashion berkualitas dan terpercaya</p>
 
             <div class="info">
@@ -287,7 +322,7 @@
                 <p><b>Email:</b> handikawijaksono@gmail.com</p>
                 <p><b>Location:</b> Babarsari</p>
         </div>
-        <button onclick="window.location.href='https://wa.me/6285848132525'"> order </button>
+        <button onclick="window.location.href='https://wa.me/6285848132525'"> Admin </button>
         </div>
 
         <div class="about-right">
@@ -355,7 +390,7 @@
             </div>
 
             <div class="contact-right">
-                <img src="https://cdn-icons-png.flaticon.com/512/1041/1041916.png" alt="contact">
+                <img src="saya.png" alt="contact">
             </div>
 
         </div>
@@ -398,7 +433,7 @@
             <div class="footer-box">
                 <h3>Menu</h3>
                 <a href="#home">Home</a>
-                <a href="#list">List Ikan</a>
+                <a href="#produk">produk</a>
                 <a href="#about">About</a>
                 <a href="#contact">Contact</a>
             </div>
@@ -419,6 +454,8 @@
 
     </footer>
     <script src="script.js"></script>
+  
+
 
     </body>
     </html>

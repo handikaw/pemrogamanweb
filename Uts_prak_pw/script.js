@@ -1,65 +1,158 @@
-document.addEventListener("DOMContentLoaded", function () {
+const beliBtn = document.querySelectorAll(".beli-btn");
+const cartList = document.getElementById("cart-list");
+const cartCount = document.getElementById("cart-count");
+const totalText = document.getElementById("total");
 
-    let cart = [];
-    let total = 0;
+let total = 0;
+let jumlah = 0;
 
-    const buttons = document.querySelectorAll(".beli-btn");
-    const cartCount = document.getElementById("cart-count");
-    const totalText = document.getElementById("total");
-    const cartList = document.getElementById("cart-list");
+beliBtn.forEach((btn)=>{
 
-    buttons.forEach(btn => {
-        btn.addEventListener("click", function () {
+    btn.addEventListener("click",()=>{
 
-            const item = this.closest(".produk-item");
+        const produk = btn.parentElement;
+        const nama = produk.querySelector("h3").innerText;
+        const harga = parseInt(produk.dataset.price);
+        const size = produk.querySelector(".size").value;
+        const warna = produk.querySelector(".warna").value;
 
-            const name = item.querySelector("h3").innerText;
-            const price = parseInt(item.dataset.price);
+        if(size == "" || warna == ""){
+            alert("Pilih size dan warna!");
+            return;
+        }
 
-         
-            const size = item.querySelector(".size")?.value;
-            const warna = item.querySelector(".warna")?.value;
+        const li = document.createElement("li");
 
-          
-            if (!size || !warna) {
-                alert("Pilih size dan warna dulu!");
-                return;
-            }
+        li.innerHTML = `
+        <div class="cart-item">
 
-            if (isNaN(price)) {
-                alert("Harga tidak ditemukan!");
-                return;
-            }
+            <div>
+                <b>${nama}</b><br>
+                Size : ${size}<br>
+                Warna : ${warna}<br>
+                Rp ${harga.toLocaleString()}
+            </div>
 
-          
-            cart.push({ name, price, size, warna });
+            <button class="hapus-btn">
+                Hapus
+            </button>
 
-            updateCart();
+        </div>
+        `;
+
+        cartList.appendChild(li);
+
+        jumlah++;
+        total += harga;
+
+        cartCount.innerText = jumlah;
+
+        totalText.innerText =
+        "Rp " + total.toLocaleString();
+        document.getElementById("cart-total")
+        .innerText =
+        "Rp " + total.toLocaleString();
+
+        const hapusBtn =
+        li.querySelector(".hapus-btn");
+
+        hapusBtn.addEventListener("click",()=>{
+
+            li.remove();
+
+            jumlah--;
+            total -= harga;
+
+            cartCount.innerText = jumlah;
+
+            totalText.innerText =
+            "Rp " + total.toLocaleString();
+            document.getElementById("cart-total")
+            .innerText =
+            "Rp " + total.toLocaleString();
+
         });
+
     });
 
-    function updateCart() {
-        cartList.innerHTML = "";
-        total = 0;
+});
 
-        cart.forEach((item, index) => {
-            total += item.price;
+const form = document.querySelector("form");
 
-            const li = document.createElement("li");
-            li.innerHTML = `
-                ${item.name} (${item.size}, ${item.warna}) - Rp ${item.price.toLocaleString()}
-                <button onclick="removeItem(${index})">❌</button>
-            `;
-            cartList.appendChild(li);
-        });
+form.addEventListener("submit",(e)=>{
 
-        cartCount.innerText = cart.length;
-        totalText.innerText = "Rp " + total.toLocaleString();
-    }
+    e.preventDefault();
 
-    window.removeItem = function (index) {
-        cart.splice(index, 1);
-        updateCart();
-    };
+    alert("Pesan berhasil dikirim!");
+
+    form.reset();
 
 });
+
+
+const checkoutBtn = document.getElementById("checkout-btn");
+const checkoutPage = document.getElementById("checkout-page");
+const checkoutItems = document.getElementById("checkout-items");
+const checkoutTotal = document.getElementById("checkout-total");
+const bayarBtn = document.getElementById("bayar-btn");
+const paymentMethod = document.getElementById("payment-method");
+
+checkoutBtn.addEventListener("click",()=>{
+
+    if(jumlah === 0){
+
+        alert("Keranjang kosong!");
+
+        return;
+    }
+
+    checkoutPage.style.display = "flex";
+
+    checkoutItems.innerHTML =
+    cartList.innerHTML;
+
+    checkoutTotal.innerText =
+    "Rp " + total.toLocaleString();
+
+});
+
+bayarBtn.addEventListener("click",()=>{
+
+    if(paymentMethod.value === ""){
+
+        alert("Pilih metode pembayaran!");
+
+        return;
+    }
+
+    alert(
+    "Pembayaran berhasil menggunakan " +
+    paymentMethod.value
+    );
+
+const historyList = document.getElementById("history-list");
+
+let totalFix = Number(total); // pastikan angka
+
+const histori = document.createElement("li");
+
+histori.innerHTML = `
+<b>Pembelian Berhasil</b><br>
+Metode : ${paymentMethod.value}<br>
+Total : Rp ${totalFix.toLocaleString("id-ID")}
+`;
+
+historyList.appendChild(histori);
+    checkoutPage.style.display = "none";
+
+});
+const closeCheckout =
+document.getElementById("close-checkout");
+
+closeCheckout.addEventListener("click",()=>{
+
+    checkoutPage.style.display =
+    "none";
+
+});
+
