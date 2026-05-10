@@ -11,13 +11,14 @@ html{
 
 body {
     margin: 0;
+    background-color: #E8E2E2;
 }
 
 nav {
 
     display: flex;
     align-items: center;
-    background: rgba(255, 255, 255, 0.8);
+    background: rgb(232, 226, 226, 0.5);
     padding: 1em 0;
     position: sticky;
     top: 0;
@@ -152,12 +153,13 @@ p {
 
 
 #produk{
-    background: linear-gradient(to bottom, #f8f8f8, #ffffff);
+    background: linear-gradient(to bottom, #E8E2E2, #E8E2E2);
     padding: 00em 1em;
 }
 
 
 .produk-list {
+    background-color: #E8E2E2;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
     gap: 2.5em;
@@ -243,7 +245,7 @@ p {
     padding: 10px 22px;
     border: none;
     border-radius: 30px;
-    background: linear-gradient(135deg, #3a2121, #ff7a7a);
+    background: linear-gradient(135deg, orangered, orangered);
     color: white;
     font-weight: 600;
     cursor: pointer;
@@ -258,7 +260,7 @@ p {
 
 
 .produk-item::before {
-    content: "THRIFT";
+    content: "RD";
     position: absolute;
     top: 10px;
     left: 10px;
@@ -270,14 +272,16 @@ p {
     letter-spacing: 1px;
 }
 #about {
-    padding: 3em 1em;
+    padding: 3em 0em;
     background: white;
+    width: 100%;
 }
 
 .about-container {
+    padding: 0 2em;
     display: flex;
     gap: 2em;
-    max-width: 1100px;
+    max-width: 100%;
     margin: auto;
     flex-wrap: wrap;
 }
@@ -428,7 +432,7 @@ p {
 
 
 footer{
-    background-color:orangered;
+    background-color:#E8E2E2;
 
     }
 
