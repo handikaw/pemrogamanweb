@@ -20,7 +20,7 @@ beliBtn.forEach((btn)=>{
             alert("Pilih size dan warna!");
             return;
         }
-        
+
         const li = document.createElement("li");
 
         li.innerHTML = `
@@ -116,46 +116,78 @@ checkoutBtn.addEventListener("click",()=>{
 
 });
 
+
 document.addEventListener("DOMContentLoaded", () => {
 
     const searchInput = document.getElementById("searchInput");
+    const searchBtn = document.getElementById("searchBtn");
     const products = document.querySelectorAll(".produk-item");
 
-    searchInput.addEventListener("input", () => {
+    function tampilkanSemua() {
+        products.forEach(p => {
+            p.style.display = "block";
+        });
+    }
+
+    function cariProduk() {
 
         let keyword = searchInput.value.toLowerCase().trim();
-
-       
         if (keyword === "") {
-            products.forEach(p => {
-                p.style.display = "block";
-            });
+            tampilkanSemua();
             return;
         }
-
-        let foundAny = false;
+        let found = false;
 
         products.forEach(product => {
 
-            let name = product.querySelector("h3")
-            .innerText.toLowerCase();
+            let name = product.querySelector("h3").innerText.toLowerCase();
 
             if (name.includes(keyword)) {
+
                 product.style.display = "block";
-                foundAny = true;
+
+                if (!found) {
+                    product.scrollIntoView({
+                        behavior: "smooth",
+                        block: "center"
+                    });
+                    found = true;
+                }
+
             } else {
                 product.style.display = "none";
             }
 
         });
 
-        if (!foundAny) {
-            products.forEach(p => p.style.display = "none");
+        if (!found) {
+            alert("Produk tidak ditemukan!");
+            tampilkanSemua(); 
         }
+    }
 
+    searchBtn.addEventListener("click", cariProduk);
+    searchInput.addEventListener("keypress", (e) => {
+        if (e.key === "Enter") {
+            cariProduk();
+        }
+    });
+
+    
+    searchInput.addEventListener("input", () => {
+        if (searchInput.value.trim() === "") {
+            tampilkanSemua();
+
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        }
     });
 
 });
+
+
 bayarBtn.addEventListener("click",()=>{
 
     if(paymentMethod.value === ""){
