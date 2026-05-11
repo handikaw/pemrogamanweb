@@ -20,7 +20,7 @@ beliBtn.forEach((btn)=>{
             alert("Pilih size dan warna!");
             return;
         }
-
+        
         const li = document.createElement("li");
 
         li.innerHTML = `
@@ -116,6 +116,46 @@ checkoutBtn.addEventListener("click",()=>{
 
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+
+    const searchInput = document.getElementById("searchInput");
+    const products = document.querySelectorAll(".produk-item");
+
+    searchInput.addEventListener("input", () => {
+
+        let keyword = searchInput.value.toLowerCase().trim();
+
+       
+        if (keyword === "") {
+            products.forEach(p => {
+                p.style.display = "block";
+            });
+            return;
+        }
+
+        let foundAny = false;
+
+        products.forEach(product => {
+
+            let name = product.querySelector("h3")
+            .innerText.toLowerCase();
+
+            if (name.includes(keyword)) {
+                product.style.display = "block";
+                foundAny = true;
+            } else {
+                product.style.display = "none";
+            }
+
+        });
+
+        if (!foundAny) {
+            products.forEach(p => p.style.display = "none");
+        }
+
+    });
+
+});
 bayarBtn.addEventListener("click",()=>{
 
     if(paymentMethod.value === ""){
@@ -132,7 +172,7 @@ bayarBtn.addEventListener("click",()=>{
 
 const historyList = document.getElementById("history-list");
 
-let totalFix = Number(total); // pastikan angka
+let totalFix = Number(total);
 
 const histori = document.createElement("li");
 
