@@ -15,7 +15,7 @@ body {
 }
 
 nav {
-    border-radius: 100px;
+    border-radius: 20px;
     display: flex;
     align-items: center;
     background: rgba(77, 69, 69, 0.5);
